@@ -35,14 +35,14 @@ function mediaArray() {
     const tamanhoArray1 = array1.length
     const tamanhoArray2 = array2.length
     
-    let sumArray1 = 0
-    for(let i in array1) {
-      sumArray1 += array1[i]
-    }
-    let sumArray2 = 0
-    for(let i in array2) {
-      sumArray2 += array2[i]
-    }
+    let sumArray1 = array1.reduce((acc, item) => {
+      return acc + item
+    }, 0)
+    
+    let sumArray2 = array2.reduce((acc, item) => {
+      return acc + item
+    }, 0)
+    
 
     let medArray1 = sumArray1 / tamanhoArray1
     let medArray2 = sumArray2 / tamanhoArray2
